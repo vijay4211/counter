@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* create  main section */
+             counter-reset: section;
+        }
+        h1{
+            /* create subsection */
+            counter-reset: subsection;
+        }
+        /* h1 ke pahile hame section name and value show karwani hai. */
+        h1::before{
+            /* increment one or more counter value */
+            counter-increment: section;
+            content: "Section " counter(section) " : ";
+        }
+        h2::before{
+            /* increment one or more counter value */
+            counter-increment: subsection;
+            content: counter(section) " : " counter(subsection);
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML/CSS Tutorials</h1>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>Bootstrap</h2>
+    <h2>W3.CSS</h2>
+    
+    <h1>Scripting Tutorials</h1>
+    <h2>JavaScript</h2>
+    <h2>jQuery</h2>
+    <h2>React</h2>
+    
+    <h1>Programming Tutorials</h1>
+    <h2>Python</h2>
+    <h2>Java</h2>
+    <h2>C++</h2>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  -->
+    <style>
+        body{
+            /* yahaper ham counter create karte hai. */
+            counter-reset: section;
+        }
+        /* h2 ke element ke pahile hame section name and value show honi chahiye. */
+        h2::before{
+            counter-increment: section;
+            /* yaha likhane se hame section name and value show hoti hai. */
+            content: "Section" counter(section) " : ";
+        }
+    </style>
+</head>
+<body>
+    <h1>Using CSS Counters</h1>
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+    <h2>Python Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+</body>
+</html>
+
+<!-- 
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+
+
+
+ -->
